@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LibraryStellar.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace LibraryStellar.Data
 {
@@ -7,6 +8,10 @@ namespace LibraryStellar.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
         }
+
+        public DbSet<Book> Books { get; set; }
+
     }
 }
